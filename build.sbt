@@ -15,9 +15,6 @@ lazy val `sample-keycloak` = (project in file("."))
     // Scala version
     scalaVersion in ThisBuild := "2.12.10",
 
-    // Organization
-    organization := "com.sparkcognition",
-
     // Scala compiler
     scalacOptions ++= Seq(
       "-unchecked",

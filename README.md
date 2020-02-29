@@ -37,7 +37,7 @@ Navigate to `http://localhost:8080/auth`.  Username/password are both "keycloak"
   
 (4) Create a user
 
-- Visit the login page for the `demo` realm [here](http://localhost:8085/auth/realms/demo/account/)
+- Visit the login page for the `demo` realm [here](http://localhost:8080/auth/realms/customer-0/account/)
 - Click `Register` and fill out the appropriate information
 
 (5) Logout after registration and proceed to the `Postman Setup` instructions below to test out a login flow
@@ -65,6 +65,6 @@ For the auth code flow login, two requests need to be made: one to get the autho
 
 You can execute the `Auth Code Flow Code Request` request from Postman, however it redirects you to a login page so it is easier to do it simply by plugging in the right url into your browser.
 
-To perform the request click [here](http://localhost:8085/auth/realms/demo/protocol/openid-connect/auth?response_type=code&client_id=test-client&redirect_uri=urn:ietf:wg:oauth:2.0:oob)
+To perform the request click [here](http://localhost:8080/auth/realms/demo/protocol/openid-connect/auth?response_type=code&client_id=test-client&redirect_uri=urn:ietf:wg:oauth:2.0:oob)
 
 After logging in, Keycloak will redirect you to a page that displays the authorization code. Copy this code and plug it into the `Auth Code Flow Token Request` in Postman. Send the request and you will receive the expected tokens.
